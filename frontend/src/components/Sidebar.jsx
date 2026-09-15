@@ -12,12 +12,8 @@ import {
 
 export default function Sidebar({ isOpen, onClose }) {
   const navItems = [
-    { name: "Dashboard", path: "/", icon: LayoutDashboard },
     { name: "WhatsApp Inbox", path: "/inbox", icon: MessageSquare },
-    { name: "Products", path: "/products", icon: ShoppingBag },
-    { name: "Orders", path: "/orders", icon: PackageCheck },
-    { name: "Customers", path: "/customers", icon: Users },
-    { name: "Settings", path: "/settings", icon: Settings },
+    { name: "Customers CRM", path: "/customers", icon: Users },
   ];
 
   return (

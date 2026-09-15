@@ -118,5 +118,25 @@
     "text": "Hi Pooja Sharma 👋 Your favourite sourdough is fresh today!\nWould you like to place your usual order?\n\nCategories:\n🍞 1. Sourdough Breads\n🥐 2. Croissants\n🍪 3. Cookies\n🎁 4. Combos\n🔄 5. Order My Previous Order",
     "timestamp": "2026-09-15T19:43:31.026Z",
     "status": "sent"
+  },
+  {
+    "id": "msg_1789501612183_918551890493_buufyk",
+    "phone": "918551890493",
+    "customerName": "Owner",
+    "sender": "agent",
+    "isAI": false,
+    "text": "Hello! This is a test message sent from your WhatsApp CRM dashboard.",
+    "timestamp": "2026-09-15T19:46:52.183Z",
+    "status": "sent"
+  },
+  {
+    "id": "msg_1789501634031_918551890493_h9bqa7",
+    "phone": "918551890493",
+    "customerName": "Owner",
+    "sender": "agent",
+    "isAI": false,
+    "text": "Hello! This is a test message from your WhatsApp CRM dashboard.",
+    "timestamp": "2026-09-15T19:47:14.031Z",
+    "status": "sent"
   }
 ]

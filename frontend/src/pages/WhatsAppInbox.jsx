@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { Bot, MessageSquare, Phone, PlusCircle, Search, Send, Sparkles, UserPlus } from 'lucide-react'
 import ChatMessage from '../components/ChatMessage'
 import LoadingSpinner from '../components/LoadingSpinner'
@@ -31,8 +32,11 @@ const getInitials = (name) => {
 }
 
 export default function WhatsAppInbox() {
+  const [searchParams] = useSearchParams()
+  const urlPhone = searchParams.get('phone')
+
   const [conversations, setConversations] = useState([])
-  const [activePhone, setActivePhone] = useState(null)
+  const [activePhone, setActivePhone] = useState(urlPhone || null)
   const [messages, setMessages] = useState([])
   const [loading, setLoading] = useState(true)
   const [messagesLoading, setMessagesLoading] = useState(false)
@@ -61,8 +65,9 @@ export default function WhatsAppInbox() {
       const list = Array.isArray(data) ? data : []
       setConversations(list)
 
-      // Keep selection or pick first available
+      // Keep selection, use URL param if valid, or pick first available
       setActivePhone((curr) => {
+        if (urlPhone && list.some((c) => c.phone === urlPhone)) return urlPhone
         if (curr && list.some((c) => c.phone === curr)) return curr
         return list.length > 0 ? list[0].phone : null
       })
@@ -73,7 +78,7 @@ export default function WhatsAppInbox() {
         console.error('Failed to fetch conversations:', error.message)
       }
     }
-  }, [])
+  }, [urlPhone])
 
   // Fetch messages for active contact
   const fetchMessages = useCallback(async (phone) => {

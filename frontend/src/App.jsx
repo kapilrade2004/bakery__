@@ -20,13 +20,9 @@ function App() {
         <Topbar onMenuToggle={() => setSidebarOpen(true)} />
         <main className="page-content">
           <Routes>
-            <Route path="/" element={<Dashboard />} />
             <Route path="/inbox" element={<WhatsAppInbox />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/orders" element={<Orders />} />
             <Route path="/customers" element={<Customers />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<Navigate to="/inbox" replace />} />
           </Routes>
         </main>
       </div>

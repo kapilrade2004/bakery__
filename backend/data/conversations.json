@@ -22,8 +22,17 @@
     "name": "Pooja Sharma",
     "lastMessage": "Hi Pooja Sharma 👋 Your favourite sourdough is fresh today!\nWould you like to place your usual order?\n\nCategories:\n🍞 1. Sourdough Breads\n🥐 2. Croissants\n🍪 3. Cookies\n🎁 4. Combos\n🔄 5. Order My Previous Order",
     "lastUpdated": "2026-09-15T19:43:31.026Z",
-    "unreadCount": 1,
+    "unreadCount": 0,
     "customerSince": "2026-09-15T19:43:26.408Z",
+    "totalMessages": 2
+  },
+  {
+    "phone": "918551890493",
+    "name": "Owner",
+    "lastMessage": "Hello! This is a test message from your WhatsApp CRM dashboard.",
+    "lastUpdated": "2026-09-15T19:47:14.031Z",
+    "unreadCount": 0,
+    "customerSince": "2026-09-15T19:46:52.183Z",
     "totalMessages": 2
   }
 ]
