@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  --bg-app: #f6f8fb;
+  --bg-surface: #ffffff;
+  --bg-sidebar: #111827;
+  --bg-sidebar-hover: #1f2937;
+  --bg-subtle: #f1f5f9;
+  --text-primary: #172033;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --text-inverse: #ffffff;
+  --primary: #16a34a;
+  --primary-hover: #15803d;
+  --primary-subtle: #ecfdf3;
+  --border-color: #e5eaf0;
+  --border-subtle: #f1f5f9;
+  --success: #16a34a;
+  --success-bg: #dcfce7;
+  --warning: #d97706;
+  --warning-bg: #fef3c7;
+  --danger: #dc2626;
+  --danger-bg: #fee2e2;
+  --info: #2563eb;
+  --info-bg: #dbeafe;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, .04);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, .07);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 999px;
+  --transition: 180ms ease;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: var(--text-primary);
+  background: var(--bg-app);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: var(--bg-app); }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: .55; }
+h1, h2, h3, p { margin: 0; }
+a { color: inherit; }
+
+.app-container { display: flex; min-height: 100vh; }
+.main-wrapper { min-width: 0; flex: 1; display: flex; flex-direction: column; }
+.page-content { width: 100%; max-width: 1540px; margin: 0 auto; padding: 28px 32px 48px; flex: 1; }
+.card { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
+.btn { border: 1px solid transparent; border-radius: var(--radius-sm); padding: 10px 14px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 600; font-size: 13px; transition: var(--transition); }
+.btn-primary { color: white; background: var(--primary); }
+.btn-primary:hover { background: var(--primary-hover); }
+.btn-secondary { color: var(--text-primary); background: white; border-color: var(--border-color); }
+.btn-secondary:hover { background: var(--bg-subtle); }
+.input-field, .select-field { width: 100%; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: white; color: var(--text-primary); padding: 10px 12px; outline: none; }
+.input-field:focus, .select-field:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(22, 163, 74, .12); }
+.page-heading { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; margin-bottom: 24px; }
+.page-heading h1 { font: 700 26px 'Space Grotesk', sans-serif; letter-spacing: -.03em; }
+.page-heading p { color: var(--text-secondary); font-size: 14px; margin-top: 5px; }
+.section-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.section-title h2 { font: 600 17px 'Space Grotesk', sans-serif; }
+.section-title a { color: var(--primary); font-size: 13px; font-weight: 600; text-decoration: none; }
+.empty-state { padding: 44px 20px; text-align: center; color: var(--text-muted); }
+.empty-state h3 { color: var(--text-primary); font-size: 15px; margin: 10px 0 4px; }
+.empty-state p { font-size: 13px; }
+.error-state { padding: 22px; color: var(--danger); background: var(--danger-bg); border-radius: var(--radius-md); font-size: 14px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th { color: var(--text-muted); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; padding: 13px 16px; border-bottom: 1px solid var(--border-color); white-space: nowrap; }
+td { padding: 14px 16px; border-bottom: 1px solid var(--border-subtle); font-size: 13px; vertical-align: middle; }
+tbody tr:last-child td { border-bottom: 0; }
+@media (max-width: 760px) {
+  .page-content { padding: 22px 16px 36px; }
+  .page-heading { flex-direction: column; }
+  .page-heading .btn { width: 100%; }
+}

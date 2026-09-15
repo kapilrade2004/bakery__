@@ -1,0 +1,20 @@
+[
+  {
+    "phone": "919876543210",
+    "name": "Test Customer",
+    "lastMessage": "Hi, do you have sourdough today?",
+    "lastUpdated": "2026-09-15T17:39:34.605Z",
+    "unreadCount": 0,
+    "customerSince": "2026-09-15T17:39:34.605Z",
+    "totalMessages": 1
+  },
+  {
+    "phone": "919309154732",
+    "name": "Aman",
+    "lastMessage": "All messages are now actively logged in the backend with Customer Name, Mobile Number, and Message history.",
+    "lastUpdated": "2026-09-15T18:25:40.805Z",
+    "unreadCount": 0,
+    "customerSince": "2026-09-15T18:06:39.440Z",
+    "totalMessages": 9
+  }
+]
