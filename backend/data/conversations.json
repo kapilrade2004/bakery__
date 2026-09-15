@@ -16,5 +16,14 @@
     "unreadCount": 0,
     "customerSince": "2026-09-15T18:06:39.440Z",
     "totalMessages": 9
+  },
+  {
+    "phone": "919876500111",
+    "name": "Pooja Sharma",
+    "lastMessage": "Hi Pooja Sharma 👋 Your favourite sourdough is fresh today!\nWould you like to place your usual order?\n\nCategories:\n🍞 1. Sourdough Breads\n🥐 2. Croissants\n🍪 3. Cookies\n🎁 4. Combos\n🔄 5. Order My Previous Order",
+    "lastUpdated": "2026-09-15T19:43:31.026Z",
+    "unreadCount": 1,
+    "customerSince": "2026-09-15T19:43:26.408Z",
+    "totalMessages": 2
   }
 ]

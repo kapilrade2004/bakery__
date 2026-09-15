@@ -278,6 +278,36 @@ const getMessageLogs = (req, res) => {
   }
 };
 
+// ---------------------------------------------------------------------------
+// POST /api/whatsapp/simulate-incoming — Test incoming message without live webhook
+// ---------------------------------------------------------------------------
+
+const simulateIncomingMessage = async (req, res) => {
+  try {
+    const { from, name, text } = req.body;
+    if (!from || !text) {
+      return res.status(400).json({
+        success: false,
+        message: "Missing 'from' (phone number) or 'text' message",
+      });
+    }
+
+    const profileName = name || "Customer";
+    await processIncomingMessage(from, text, profileName);
+
+    res.json({
+      success: true,
+      message: `Simulated incoming message from ${profileName} (${from}) processed successfully`,
+    });
+  } catch (error) {
+    console.error("Simulation error:", error.message);
+    res.status(500).json({
+      success: false,
+      message: error.message || "Failed to simulate incoming message",
+    });
+  }
+};
+
 module.exports = {
   sendMessage,
   verifyWebhook,
@@ -286,4 +316,5 @@ module.exports = {
   getConversationMessages,
   getMessageLogs,
   getStatus,
+  simulateIncomingMessage,
 };

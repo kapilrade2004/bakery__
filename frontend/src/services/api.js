@@ -35,6 +35,10 @@ export const apiService = {
 
   // WhatsApp connection status (NEW)
   getWhatsAppStatus: async () => unwrap(await api.get('/whatsapp/status')),
+
+  // Simulate incoming customer message (for testing before webhook is live)
+  simulateIncomingMessage: async ({ from, name, text }) =>
+    unwrap(await api.post('/whatsapp/simulate-incoming', { from, name, text })),
 }
 export const getApiError = (error, fallback = 'Something went wrong. Please try again.') =>
   error.response?.data?.message || error.message || fallback

@@ -10,6 +10,7 @@ router.get("/conversations/:phone/messages", whatsappController.getConversationM
 router.get("/logs", whatsappController.getMessageLogs);
 router.get("/messages", whatsappController.getMessageLogs);
 router.get("/status", whatsappController.getStatus);
+router.post("/simulate-incoming", whatsappController.simulateIncomingMessage);
 
 module.exports = router;
 

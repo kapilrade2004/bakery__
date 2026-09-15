@@ -98,5 +98,25 @@
     "text": "All messages are now actively logged in the backend with Customer Name, Mobile Number, and Message history.",
     "timestamp": "2026-09-15T18:25:40.805Z",
     "status": "sent"
+  },
+  {
+    "id": "msg_1789501406402_919876500111_0ziw44",
+    "phone": "919876500111",
+    "customerName": "Pooja Sharma",
+    "sender": "customer",
+    "isAI": false,
+    "text": "Hi, what are your fresh baked items today?",
+    "timestamp": "2026-09-15T19:43:26.399Z",
+    "status": "received"
+  },
+  {
+    "id": "msg_1789501411027_919876500111_frhmew",
+    "phone": "919876500111",
+    "customerName": "Pooja Sharma",
+    "sender": "agent",
+    "isAI": true,
+    "text": "Hi Pooja Sharma 👋 Your favourite sourdough is fresh today!\nWould you like to place your usual order?\n\nCategories:\n🍞 1. Sourdough Breads\n🥐 2. Croissants\n🍪 3. Cookies\n🎁 4. Combos\n🔄 5. Order My Previous Order",
+    "timestamp": "2026-09-15T19:43:31.026Z",
+    "status": "sent"
   }
 ]
